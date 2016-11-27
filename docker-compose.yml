@@ -1,0 +1,13 @@
+version: '2'
+services:
+  memcached:
+    container_name: openvpn
+    restart: always
+    build: .
+    image: openvpn
+    volumes:
+      - ./volumes:/etc/openvpn
+    network_mode: host
+    ports:
+      - 1194:1194/udp
+    privileged: true
