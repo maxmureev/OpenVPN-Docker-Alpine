@@ -1,6 +1,7 @@
 # How to use
 
 ```
+cd
 git clone https://github.com/maxmureev/OpenVPN-Docker-Alpine.git
 cd OpenVPN-Docker-Alpine
 docker build . -t openvpn
@@ -26,5 +27,5 @@ cp pki/dh.pem ../../volumes/keys
 ./easyrsa sign-req client USER_1
 
 # Start 
-docker run -d --name=openvpn -v ~/openvpn/volumes:/etc/openvpn --privileged -p 1194:1194/udp --net=host openvpn
+docker run -d --name=openvpn -v ~/OpenVPN-Docker-Alpine/volumes:/etc/openvpn --privileged -p 1194:1194/udp --net=host openvpn
 ```
