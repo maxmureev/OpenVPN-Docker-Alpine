@@ -1,6 +1,6 @@
 version: '2'
 services:
-  memcached:
+  openvpn:
     container_name: openvpn
     restart: always
     build: .
